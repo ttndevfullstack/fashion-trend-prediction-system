@@ -99,7 +99,7 @@ for step in range(iterations):
     random_latent_vectors = np.random.normal(size=(batch_size, latent_dim))
     misleading_targets = np.zeros((batch_size, 1))
     a_loss = gan.train_on_batch(random_latent_vectors, misleading_targets)
-     start += batch_size
+    start += batch_size
     if start > len(x_train) - batch_size:
       start = 0
     if step % 100 == 0:

@@ -222,7 +222,7 @@ def api_currenttrends():
         # the groupby call makes a pandas series by grouping 'the_parent' and 'the_child', while summing the numerical column 'child_size'
         df1 = df.groupby(['Bigram', 'Rating'])['Count'].sum()
         df1 = df1.reset_index()
-    
+        
         # start a new flare.json document
         flare = dict()
         d = {"name": "flare", "children": []}
